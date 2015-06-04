@@ -36,7 +36,7 @@ $data = array(
     'c' => 'javascript:void(0)',
 );
 $data1 = $data2 = $data;
-$data3 = '<div onload="javascript:location.href='/';"></div>';
+$data3 = '<div onload="javascript:location.href=\'/\';"></div>';
 
 xssFilter($data1); //批量处理：针对全部字段过滤
 xssFilter($data2, false, array('a')); //批量处理：针对a字段对应的内容进行过滤
